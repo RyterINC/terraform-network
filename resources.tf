@@ -9,6 +9,12 @@ terraform {
   }
 }
 
+# Configure the AWS Provider
+provider "aws" {
+  region = var.region
+}
+
+
 data "aws_availability_zones" "available" {}
 
 # NETWORKING #
